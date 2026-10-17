@@ -53,4 +53,4 @@ A simple Point-of-Sale web app built with Laravel, rebuilt from the CodeIgniter 
 
 ## Live demo
 
-(add your hosted link here)
+http://pos-laravel-art.22web.org
