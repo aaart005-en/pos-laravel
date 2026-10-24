@@ -33,10 +33,10 @@ A simple Point-of-Sale web app built with Laravel, rebuilt from the CodeIgniter 
    copy .env.example .env
    php artisan key:generate
 ```
-4. Create the SQLite database file and run the migrations:
+4. Create the SQLite database file, run the migrations and seed the sample data:
 ```
-   type nul > database\database.sqlite
-   php artisan migrate
+   php -r "file_exists('database/database.sqlite') || touch('database/database.sqlite');"
+   php artisan migrate --seed
 ```
 5. Start the development server:
 ```
@@ -49,7 +49,7 @@ A simple Point-of-Sale web app built with Laravel, rebuilt from the CodeIgniter 
 - `routes/web.php` – route definitions
 - `app/Http/Controllers/` – `PageController`, `CustomerController`, `UserController`
 - `resources/views/` – Blade views (`layouts`, `pages`, `customers`, `users`)
-- `database/migrations/` and `database/seeders/` – default Laravel migration and seeder files
+- `database/migrations/` and `database/seeders/` – migrations for the customers and users tables, and seeders with sample data
 
 ## Live demo
 
